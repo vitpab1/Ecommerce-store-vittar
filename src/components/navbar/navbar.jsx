@@ -11,6 +11,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import logo from "./logo.png";
 
+import CartWidget from "./CartWidget";
+
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -27,6 +29,7 @@ export default function NavBar() {
           <Button color="inherit">Preguntas Frecuentes </Button>
           <Button color="inherit">Venta Mayorista</Button>
           <Button color="inherit">Contacto</Button>
+          <CartWidget />
         </Toolbar>
       </AppBar>
     </Box>
