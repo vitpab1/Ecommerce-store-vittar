@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import PlaceHolder from "./placeholder.jpeg";
+import ItemCount from "../ItemCount";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -37,6 +38,7 @@ export default function ItemListContainer() {
               />{" "}
               <p>$576 </p>
               Maceta placeholder
+              <ItemCount stock={5} initial={1} />
             </Item>
           </Grid>
         ))}
