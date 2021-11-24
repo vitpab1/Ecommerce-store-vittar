@@ -5,6 +5,8 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import PlaceHolder from "./placeholder.jpeg";
 import ItemCount from "../ItemCount";
+import { useState, useEffect } from "react";
+import getProducts from "./handMadePromise";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -14,6 +16,17 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+  console.log(products);
+
+  useEffect(() => {
+    getProducts
+      .then((res) => {
+        setProducts(res);
+      })
+      .catch((err) => alert("Estamos ante un problema", err));
+  }, []);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid

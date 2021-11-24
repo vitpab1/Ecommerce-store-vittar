@@ -22,6 +22,11 @@ const ItemCount = ({ stock, initial }) => {
   const onAdd = () => {
     alert("Compraste " + count + " Macetas");
   };
+
+  const onDetails = () => {
+    alert("products details");
+  };
+
   return (
     <div>
       <p>{count}</p>
@@ -30,6 +35,7 @@ const ItemCount = ({ stock, initial }) => {
       <button onClick={addItem}>+</button>
 
       <button onClick={onAdd}>Agregar</button>
+      <button onClick={onDetails}>Detalles</button>
     </div>
   );
 };
